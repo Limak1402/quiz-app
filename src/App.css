@@ -1,0 +1,17 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.signup-form, .login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, .signup-form, .login-button {
+  cursor: pointer;
+}
