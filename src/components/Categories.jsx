@@ -5,6 +5,7 @@ import db from '../firebase';
 import { ref, getDownloadURL } from "firebase/storage";
 import { storage } from '../firebase';
 
+
 const Categories = ({ category }) => {
   const navigate = useNavigate();
 
@@ -18,6 +19,8 @@ const Categories = ({ category }) => {
   const [start, setStart] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [isCorrect, setIsCorrect] = useState(null);
+  const [answered, setAnswered] = useState(false);
+  const [correctAnswers, setCorrectAnswers] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,7 +39,6 @@ const Categories = ({ category }) => {
         }
       }
 
-      // Pobieramy adresy URL obrazów dla każdego pytania
       const questionsWithImages = await Promise.all(uniqueQuestions.map(async (question) => {
         if (question.image) {
           const imageRef = ref(storage, question.image);
@@ -54,6 +56,7 @@ const Categories = ({ category }) => {
       setCurrentIndex(0);
       setSelectedAnswer(null);
       setIsCorrect(null);
+      setAnswered(false);
       fetchData();
     }
   }, [start, category]);
@@ -67,12 +70,19 @@ const Categories = ({ category }) => {
     setCurrentQuestion(questions[currentIndex + 1]);
     setSelectedAnswer(null);
     setIsCorrect(null);
+    setAnswered(false);
   };
 
   const handleAnswerClick = (index) => {
-    setSelectedAnswer(index);
-    const correctIndex = questions[currentIndex].correctIndex;
-    setIsCorrect(index === correctIndex);
+    if(!answered) {
+      setSelectedAnswer(index);
+      const correctIndex = questions[currentIndex].correctIndex;
+      setIsCorrect(index === correctIndex);
+      if(index === correctIndex) {
+        setCorrectAnswers(prevCount => prevCount + 1);
+      }
+      setAnswered(true);
+    } 
   };
 
   return (
@@ -99,16 +109,20 @@ const Categories = ({ category }) => {
                       : 'transparent',
                   }}
                   onClick={() => handleAnswerClick(index)}
+                  className={answered ? 'disabled' : ''}
                 >
                   {answer}
                 </li>
               ))}
             </ul>
           )}
-          <button onClick={handleNextQuestion}>Next Question</button>
+          <button onClick={handleNextQuestion}>Następne pytanie</button>
         </div>
       ) : (
         <div>
+          {correctAnswers !== undefined && (
+                <p>Liczba poprawnych odpowiedzi: {correctAnswers}</p>
+            )}
           <button onClick={backToHome}>Powrót</button>
         </div>
       )}
