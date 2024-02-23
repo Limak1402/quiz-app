@@ -1,0 +1,90 @@
+.App {
+    background: -webkit-linear-gradient(#687EFF, #98E4FF, #687EFF);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 65%;
+    margin: 10px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    background-color: rgb(51, 58, 115, 0.7);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+.greeting {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#ec951b, #eeff00);
+    padding: 0 15px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 10px 20px 50px 20px;
+}
+
+.signup, .login, .text {
+    color: white;
+}
+
+.login-form, .signup-form {
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    height: 10px;
+    width: 300px;
+    opacity: 0.8;
+    margin: 10px;
+    border-radius: 15px;
+    border:  none;
+    padding: 15px;
+    font-size: 17px;
+}
+
+input::placeholder {
+    text-align: center; 
+    color: black;
+    font-weight: bold;
+}
+
+.login-button, .signup-button, .Logout {
+  background-color: #fff;
+  border: 0 solid #e2e8f0;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1;
+  margin: 10px;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none #0d172a solid;
+  text-decoration-thickness: auto;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 50%;
+  opacity: 0.8;
+}
+
+.login-button:hover, .signup-button:hover, .Logout:hover {
+  background-color: #1e293b;
+  color: #fff;
+}
+
+.xpp {
+    font-size: 18px;
+    color: rgb(0, 255, 0);
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}

@@ -4,6 +4,7 @@ import { doc, collection, getDocs } from "firebase/firestore";
 import db from '../firebase';
 import { ref, getDownloadURL } from "firebase/storage";
 import { storage } from '../firebase';
+import '../style/authorisation.css'
 
 
 const Categories = ({ category }) => {
@@ -90,8 +91,8 @@ const Categories = ({ category }) => {
       <h1>{`${category} Quiz`}</h1>
       {!start ? (
         <div>
-            <button onClick={handleStart}>Start</button>
-            <button onClick={backToHome}>Powrót</button>
+            <button onClick={handleStart} className='Logout'>Start</button>
+            <button onClick={backToHome} className='Logout'>Powrót</button>
         </div>
       ) : currentQuestion ? (
         <div>
@@ -123,7 +124,7 @@ const Categories = ({ category }) => {
           {correctAnswers !== undefined && (
                 <p>Liczba poprawnych odpowiedzi: {correctAnswers}</p>
             )}
-          <button onClick={backToHome}>Powrót</button>
+          <button onClick={backToHome} className='Logout'>Powrót</button>
         </div>
       )}
     </div>

@@ -27,9 +27,9 @@ const handleSubmit = async (e) => {
 }
 
   return (
-    <div>
-        <h1>Witaj w Quiz App</h1>
-        <h1>Zaloguj się</h1> 
+    <div className='container'>
+        <h1 className='greeting'>Witaj w Quiz App</h1>
+        <h1 className='login'>Zaloguj się</h1> 
         <form onSubmit={ handleSubmit } className='login-form'>
 
             <input type="email" placeholder='Email' required value={ email }
@@ -40,7 +40,7 @@ const handleSubmit = async (e) => {
 
             <button type='submit' className='login-button'>Zaloguj się</button>
         </form>
-        <p>Nie masz konta? <Link to='/signup'>Uwtórz je</Link></p>
+        <p className='text'>Nie masz konta? <Link to='/signup' className='xpp'>Utwórz je</Link></p>
     </div>
   )
 }

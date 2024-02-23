@@ -30,7 +30,7 @@ const Home = () => {
         <Link to="flags"><Boxes {...BOXES_TABLE[2]}/></Link>
         <Link to="animals"><Boxes {...BOXES_TABLE[3]}/></Link>
         <Link to="cars"><Boxes {...BOXES_TABLE[4]}/></Link>
-        <div><button onClick={ handleLogout }>Wyloguj</button></div>
+        <div><button onClick={ handleLogout } className='Logout'>Wyloguj</button></div>
     </div>
   )
 }

@@ -3,6 +3,7 @@ import { auth } from '../firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from "react-router";
 import { Link } from 'react-router-dom';
+import '../style/authorisation.css'
 
 const Signup = () => {
 
@@ -27,9 +28,9 @@ const handleSubmit = async (e) => {
 }
 
   return (
-    <div>
-        <h1>Witaj w Quiz App</h1>
-        <h1>Zarejestruj się</h1> 
+    <div className='container'>
+        <h1 className='greeting'>Witaj w Quiz App</h1>
+        <h1 className='signup'>Zarejestruj się</h1> 
         <form onSubmit={ handleSubmit } className='signup-form'>
 
             <input type="email" placeholder='Email' required value={ email }
@@ -40,7 +41,7 @@ const handleSubmit = async (e) => {
 
             <button type='submit' className='signup-button'>Zarejestruj się</button>
         </form>
-        <p>Masz już konto? <Link to='/login'>Zaloguj się</Link></p>
+        <p className='text'>Masz już konto? <Link to='/login' className='xpp'>Zaloguj się</Link></p>
     </div>
   )
 }
