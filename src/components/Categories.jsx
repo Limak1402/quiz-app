@@ -5,6 +5,7 @@ import db from '../firebase';
 import { ref, getDownloadURL } from "firebase/storage";
 import { storage } from '../firebase';
 import '../style/authorisation.css'
+import '../style/buttons.css'
 
 
 const Categories = ({ category }) => {

@@ -1,0 +1,87 @@
+div a {
+    display: inline-block;
+    margin: 20px 15px 20px 15px;
+  }
+  
+a {
+    text-decoration: none; 
+    list-style-type: none; 
+    font-size: 17px;
+    font-weight: bold;
+    color: #ec951b;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    box-shadow: 0px 0px 10px 5px rgba(218, 12, 129, 0.5);
+    background-color: rgba(53, 55, 75, 0.3);
+}
+
+.svg-inline--fa {
+    height: 25px;
+}
+
+.colorful-word {
+    font-size: 27px; /* Rozmiar czcionki */
+    font-weight: bold;
+  }
+  
+  .letter:nth-child(1) {
+    color: red; /* Pierwsza litera - czerwony kolor */
+    padding-right: 2px;
+  }
+  
+  .letter:nth-child(2) {
+    color: blue; /* Druga litera - niebieski kolor */
+    padding-right: 2px;
+  }
+  
+  .letter:nth-child(3) {
+    color: green; /* Trzecia litera - zielony kolor */
+    padding-right: 2px;
+  }
+
+  .letter:nth-child(4) {
+    color: yellow; /* Pierwsza litera - czerwony kolor */
+    padding-right: 2px;
+  }
+  
+  .letter:nth-child(5) {
+    color: purple; /* Druga litera - niebieski kolor */
+    padding-right: 2px;
+  }
+  
+  .letter:nth-child(6) {
+    color: white; /* Trzecia litera - zielony kolor */
+    padding-right: 2px;
+  }
+  .letter:nth-child(8) {
+    color: pink; /* Pierwsza litera - czerwony kolor */
+    padding-right: 2px;
+  }
+  
+  .letter:nth-child(9) {
+    color: black; /* Druga litera - niebieski kolor */
+    padding-right: 2px;
+  }
+  
+  .letter:nth-child(10) {
+    color: orange; /* Trzecia litera - zielony kolor */
+    padding-right: 2px;
+  }
+  
+  .letter:nth-child(11) {
+    color: brown; /* Pierwsza litera - czerwony kolor */
+    padding-right: 2px;
+  }
+  
+  .letter:nth-child(12) {
+    color: grey; /* Druga litera - niebieski kolor */
+    padding-right: 2px;
+  }
+  
+  .letter:nth-child(13) {
+    color: rgb(0, 255, 242); /* Trzecia litera - zielony kolor */
+  }
+

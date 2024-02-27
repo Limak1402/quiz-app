@@ -4,7 +4,7 @@ import { faEarthAmericas, faFutbol, faFlag, faPaw, faCar } from '@fortawesome/fr
 export const BOXES_TABLE = [
     {
         icon: <FontAwesomeIcon icon={faEarthAmericas} />,
-        title: 'Co to za kraj?'
+        title: 'Państwa'
     },
     {
         icon: <FontAwesomeIcon icon={faFutbol} />,

@@ -4,6 +4,8 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from "react-router";
 import { Link } from 'react-router-dom';
 import '../style/authorisation.css'
+import '../style/buttons.css'
+
 
 const Signup = () => {
 
