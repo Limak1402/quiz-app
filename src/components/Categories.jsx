@@ -6,6 +6,7 @@ import { ref, getDownloadURL } from "firebase/storage";
 import { storage } from '../firebase';
 import '../style/authorisation.css'
 import '../style/buttons.css'
+import '../style/category.css'
 
 
 const Categories = ({ category }) => {
@@ -88,17 +89,17 @@ const Categories = ({ category }) => {
   };
 
   return (
-    <div>
-      <h1>{`${category} Quiz`}</h1>
+    <div className='Play'>
+      <h1 className='Play-text'>{`${category} Quiz`}</h1>
       {!start ? (
         <div>
-            <button onClick={handleStart} className='Logout'>Start</button>
-            <button onClick={backToHome} className='Logout'>Powrót</button>
+            <button onClick={handleStart} className='Start'>Start</button>
+            <button onClick={backToHome} className='Back'>Powrót</button>
         </div>
       ) : currentQuestion ? (
         <div>
           <h2>{currentQuestion.question}</h2>
-          {currentQuestion && currentQuestion.imageURL && <img src={currentQuestion.imageURL} alt="Question" />}
+          {currentQuestion && currentQuestion.imageURL && <img src={currentQuestion.imageURL} alt="Question" className='image'/>}
           {console.log(currentQuestion.imageURL)}
           {currentQuestion && (
             <ul>
@@ -118,14 +119,14 @@ const Categories = ({ category }) => {
               ))}
             </ul>
           )}
-          <button onClick={handleNextQuestion}>Następne pytanie</button>
+          <button onClick={handleNextQuestion} className='next-question'>Następne pytanie</button>
         </div>
       ) : (
         <div>
           {correctAnswers !== undefined && (
                 <p>Liczba poprawnych odpowiedzi: {correctAnswers}</p>
             )}
-          <button onClick={backToHome} className='Logout'>Powrót</button>
+          <button onClick={backToHome} className='Back'>Powrót</button>
         </div>
       )}
     </div>

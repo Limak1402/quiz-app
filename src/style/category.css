@@ -1,0 +1,33 @@
+.Play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 35%;
+    width: 15%;
+    margin: 10px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    background-color: rgb(51, 58, 115, 0.7);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+.Play-text {
+    font-size: 40px;
+    background: -webkit-linear-gradient(#ec951b, #eeff00);
+    padding: 0 15px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 10px 20px 30px 20px;
+}
+
+.image {
+    width: 475px;
+    height: 475px;
+}
+
+.Play li { 
+    text-decoration: none; 
+    list-style-type: none; 
+    cursor: pointer;
+}
