@@ -5,13 +5,9 @@
     box-sizing: border-box;
     color: #0d172a;
     cursor: pointer;
-    display: inline-block;
     font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: 17px;
     font-weight: bold;
     line-height: 1;
-    margin: 10px;
-    padding: 10px 0;
     text-align: center;
     text-decoration: none #0d172a solid;
     text-decoration-thickness: auto;
@@ -20,8 +16,6 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    width: 50%;
-    opacity: 0.8;
   }
   
   .login-button:hover, .signup-button:hover, .Logout:hover {
@@ -30,7 +24,6 @@
   }
   
   .xpp {
-      font-size: 18px;
       color: rgb(0, 255, 0);
       font-weight: bold;
       cursor: pointer;
@@ -46,11 +39,8 @@
     cursor: pointer;
     display: inline-block;
     font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: 17px;
     font-weight: bold;
     line-height: 1;
-    margin: 10px;
-    padding: 10px 0;
     text-align: center;
     text-decoration: none #0d172a solid;
     text-decoration-thickness: auto;
@@ -59,11 +49,88 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    width: 75%;
-    opacity: 0.8;
   }
   
   .Start:hover, .Back:hover, .next-question:hover {
     background-color: #1e293b;
     color: #fff;
   }
+
+  /* Smartfony (do 767px) */
+@media screen and (max-width: 767px) {
+  .login-button, .signup-button, .Logout {
+    font-size: 13px;
+    margin: 10px 0;
+    padding: 10px 15px;
+    width: 100%;
+  }
+  
+  .xpp {
+      font-size: 18px;
+  }
+
+  .Start, .Back {
+    font-size: 15px;
+    margin: 5px;
+    padding: 10px 0;
+    width: 60%;
+  }
+
+  .next-question {
+    font-size: 17px;
+    margin: 0 10px 10px 10px;
+    padding: 10px 0;
+    width: 75%;
+  }
+}
+
+/* Tablety (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .login-button, .signup-button, .Logout {
+    display: inline-block;
+    font-size: 17px;
+    margin: 10px;
+    padding: 10px 0;
+    width: 25%;
+  }
+  
+  .xpp {
+      font-size: 18px;
+  }
+
+  .Start, .Back, .next-question {
+    font-size: 17px;
+    margin: 10px;
+    padding: 10px 0;
+    width: 75%;
+  }
+}
+
+/* Komputery (od 1024px wzwyż) */
+@media screen and (min-width: 1024px) {
+  .login-button, .signup-button, .Logout {
+    display: inline-block;
+    font-size: 17px;
+    margin: 10px;
+    padding: 10px 0;
+    width: 30%;
+  }
+  
+  .xpp {
+      font-size: 18px;
+  }
+
+  .Start, .Back {
+    font-size: 17px;
+    margin: 10px;
+    padding: 10px 0;
+    width: 75%;
+  }
+
+  .next-question {
+    font-size: 17px;
+    margin: 0 10px;
+    padding: 10px 0;
+    width: 75%;
+  }
+}

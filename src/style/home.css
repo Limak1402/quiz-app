@@ -1,87 +1,159 @@
-div .box {
-    display: inline-block;
-    margin: 20px 15px 20px 15px;
-  }
-  
 .box {
     text-decoration: none; 
     list-style-type: none; 
-    font-size: 17px;
     font-weight: bold;
-    color: #ff9f19;
+    color: #ffd900;
     border: 1px solid rgb(255, 255, 255);
     border-radius: 15px;
-    width: 100px;
-    height: 100px;
     padding: 5px;
     box-shadow: 0px 0px 10px 5px rgba(218, 12, 129, 0.5);
     background-color: rgba(53, 55, 75, 0.3);
 }
-
-.svg-inline--fa {
-    height: 25px;
-}
-
-.colorful-word {
-    font-size: 27px; /* Rozmiar czcionki */
-    font-weight: bold;
-  }
   
   .letter:nth-child(1) {
-    color: red; /* Pierwsza litera - czerwony kolor */
+    color: red; 
     padding-right: 2px;
   }
   
   .letter:nth-child(2) {
-    color: blue; /* Druga litera - niebieski kolor */
+    color: blue; 
     padding-right: 2px;
   }
   
   .letter:nth-child(3) {
-    color: green; /* Trzecia litera - zielony kolor */
+    color: green; 
     padding-right: 2px;
   }
 
   .letter:nth-child(4) {
-    color: yellow; /* Pierwsza litera - czerwony kolor */
+    color: yellow; 
     padding-right: 2px;
   }
   
   .letter:nth-child(5) {
-    color: purple; /* Druga litera - niebieski kolor */
+    color: purple; 
     padding-right: 2px;
   }
   
   .letter:nth-child(6) {
-    color: white; /* Trzecia litera - zielony kolor */
+    color: white; 
     padding-right: 2px;
   }
   .letter:nth-child(8) {
-    color: pink; /* Pierwsza litera - czerwony kolor */
+    color: pink; 
     padding-right: 2px;
   }
   
   .letter:nth-child(9) {
-    color: black; /* Druga litera - niebieski kolor */
+    color: black; 
     padding-right: 2px;
   }
   
   .letter:nth-child(10) {
-    color: orange; /* Trzecia litera - zielony kolor */
+    color: orange; 
     padding-right: 2px;
   }
   
   .letter:nth-child(11) {
-    color: brown; /* Pierwsza litera - czerwony kolor */
+    color: brown; 
     padding-right: 2px;
   }
   
   .letter:nth-child(12) {
-    color: grey; /* Druga litera - niebieski kolor */
+    color: grey; 
     padding-right: 2px;
   }
   
   .letter:nth-child(13) {
-    color: rgb(0, 255, 242); /* Trzecia litera - zielony kolor */
+    color: rgb(36, 87, 165); 
   }
 
+
+/* Smartfony (do 767px) */
+@media screen and (max-width: 767px) {
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .box {
+    margin: 20px 15px 15px 15px;
+  }
+
+  .box {
+    font-size: 10px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .svg-inline--fa {
+    height: 18px;
+}
+
+  .colorful-word {
+    font-size: 19px; 
+    font-weight: bold;
+  }
+  
+  .greet {
+    font-size: 20px;
+  }
+}
+
+/* Tablety (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  div .box {
+    display: inline-block;
+    margin: 20px 15px 20px 15px;
+  }
+
+  .box {
+    font-size: 13px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .svg-inline--fa {
+    height: 25px;
+}
+
+  .colorful-word {
+    font-size: 25px; 
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .greet {
+    font-size: 27px;
+  }
+}
+
+/* Komputery (od 1024px wzwyż) */
+@media screen and (min-width: 1024px) {
+  div .box {
+    display: inline-block;
+    margin: 20px 15px 20px 15px;
+  }
+  
+  .box {
+    font-size: 17px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .svg-inline--fa {
+    height: 25px;
+}
+
+  .colorful-word {
+    font-size: 28px; 
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .greet {
+    font-size: 30px;
+  }
+}

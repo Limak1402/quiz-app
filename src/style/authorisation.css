@@ -7,21 +7,16 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 65%;
-    margin: 10px;
-    padding: 10px 15px;
     border-radius: 15px;
     background-color: rgb(51, 58, 115, 0.7);
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
 }
 
 .greeting {
-    font-size: 72px;
     background: -webkit-linear-gradient(#ec951b, #eeff00);
-    padding: 0 15px;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 10px 20px 50px 20px;
 }
 
 .signup, .login, .text {
@@ -34,14 +29,8 @@
 }
 
 input {
-    height: 10px;
-    width: 300px;
-    opacity: 0.8;
-    margin: 10px;
     border-radius: 15px;
     border:  none;
-    padding: 15px;
-    font-size: 17px;
 }
 
 input::placeholder {
@@ -50,8 +39,100 @@ input::placeholder {
     font-weight: bold;
 }
 
+/* Smartfony (do 767px) */
+@media screen and (max-width: 767px) {
+    .container {
+        height: 65%;
+        margin: 20px;
+        padding: 10px 15px;
+    }
+    
+    .greeting {
+        font-size: 45px;
+        padding: 0 15px;
+        margin: 10px 20px 25px 20px;
+    }
+    
+    input {
+        height: 8px;
+        width: 250px;
+        margin: 10px;
+        padding: 15px;
+        font-size: 17px;
+    }
+
+    .signup, .login {
+        font-size: 30px;
+    }
+  }
+  
+  /* Tablety (768px - 1023px) */
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        height: 65%;
+        margin: 10px;
+        padding: 10px 15px;
+    }
+
+    .greeting {
+        font-size: 72px;
+        padding: 0 15px;
+        margin: 10px 20px 50px 20px;
+    }
+    
+    input {
+        height: 10px;
+        width: 300px;
+        margin: 10px;
+        padding: 15px;
+        font-size: 17px;
+    }
+
+    .signup, .login {
+        font-size: 32px;
+    }
+  }
+  
+  /* Komputery (od 1024px wzwyż) */
+  @media screen and (min-width: 1024px) {
+    .container {
+        height: 65%;
+        margin: 10px;
+        padding: 10px 15px;
+    }
+
+    .greeting {
+        font-size: 72px;
+        padding: 0 15px;
+        margin: 10px 20px 50px 20px;
+    }
+    
+    input {
+        height: 10px;
+        width: 300px;
+        margin: 10px;
+        padding: 15px;
+        font-size: 17px;
+    }
+
+    .signup, .login {
+        font-size: 32px;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
 
 /* to do
  rozdzielić na osobne pliki:
  - walidacja stylowa (logowanie, rejestracja)
  */
+
+

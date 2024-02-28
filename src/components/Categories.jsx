@@ -98,7 +98,7 @@ const Categories = ({ category }) => {
         </div>
       ) : currentQuestion ? (
         <div>
-          <h2>{currentQuestion.question}</h2>
+          <h2 className='question'>{currentQuestion.question}</h2>
           {currentQuestion && currentQuestion.imageURL && <img src={currentQuestion.imageURL} alt="Question" className='image'/>}
           {console.log(currentQuestion.imageURL)}
           {currentQuestion && (
@@ -109,10 +109,10 @@ const Categories = ({ category }) => {
                   style={{
                     backgroundColor: selectedAnswer === index
                       ? (isCorrect ? 'green' : 'red')
-                      : 'transparent',
+                      : 'white',
                   }}
                   onClick={() => handleAnswerClick(index)}
-                  className={answered ? 'disabled' : ''}
+                  className={`answers ${answered ? 'disabled' : ''}`}
                 >
                   {answer}
                 </li>
@@ -124,7 +124,7 @@ const Categories = ({ category }) => {
       ) : (
         <div>
           {correctAnswers !== undefined && (
-                <p>Liczba poprawnych odpowiedzi: {correctAnswers}</p>
+                <p className='correct-answers'>Liczba poprawnych odpowiedzi: {correctAnswers}</p>
             )}
           <button onClick={backToHome} className='Back'>Powrót</button>
         </div>

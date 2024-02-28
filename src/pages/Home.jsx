@@ -24,7 +24,7 @@ const Home = () => {
     const user = JSON.parse(localStorage.getItem('user'));
 
   return (
-    <div>
+    <div className='menu'>
         <Greeting user={user} />
         <Colors />
         <Link to="countries" className='box'><Boxes {...BOXES_TABLE[0]}/></Link> {/*operator rozprzestrzeniania*/}
