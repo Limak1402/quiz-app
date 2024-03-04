@@ -39,6 +39,7 @@ const handleSubmit = async (e) => {
 
             <input type="password" placeholder='Hasło' required value={ password }
              onChange={(e) => setPassword(e.target.value)} />
+             <label style={{color: "white"}}>Hasło musi składać się z minumim 6 znaków</label>
 
             <button type='submit' className='login-button'>Zaloguj się</button>
         </form>
