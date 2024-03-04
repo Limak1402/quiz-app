@@ -77,15 +77,22 @@ const Categories = ({ category }) => {
   };
 
   const handleAnswerClick = (index) => {
-    if(!answered) {
+    if (!answered) {
       setSelectedAnswer(index);
       const correctIndex = questions[currentIndex].correctIndex;
       setIsCorrect(index === correctIndex);
-      if(index === correctIndex) {
+      setAnswered(true);
+
+      if (index !== correctIndex) {
+        const correctAnswerIndex = questions[currentIndex].correctIndex;
+        const allAnswers = questions[currentIndex].answers;
+        setCurrentQuestion({ ...currentQuestion, answers: [...allAnswers.map((answer, answerIndex) => answerIndex === correctAnswerIndex ? <li style={{ backgroundColor: 'green', borderRadius: '15px' }}>{answer}</li> : answer)] });
+      }
+
+      if (index === correctIndex) {
         setCorrectAnswers(prevCount => prevCount + 1);
       }
-      setAnswered(true);
-    } 
+    }
   };
 
   return (
